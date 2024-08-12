@@ -1,0 +1,6 @@
+@SqlApi.AsyncService_HostAddress = http://localhost:5257
+
+GET {{SqlApi.AsyncService_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

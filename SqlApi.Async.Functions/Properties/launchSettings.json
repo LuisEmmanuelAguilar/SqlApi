@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "SqlApi.AsyncService.Functions.csproj": {
+      "commandName": "Project",
+      "commandLineArgs": "--port 7071"
+    }
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "$schema": "./src/SqlApi.AsyncService/bin/net8.0/schemas/skyconfig.schema.json",
+  "name": "nsa-async-svc",
+  "namespace": "SqlApi.AsyncService",
+  "framework": ".netcore",
+  "runtime": "8.0.*",
+  "devPorts": {
+    "https": 5222
+  },
+  "serviceTitle": "NXT Sql Api Async Service",
+  "serviceDescription": "Interacts with query async processing and results in NXT",
+  "serviceClients": [
+    {
+      "serviceName": "BroadcastService",
+      "className": "BroadcastServiceClient",
+      "swaggerUrl": "https://not-pusa01.app.Company.net/bdcst/swagger/sas/swagger.json",
+      "filePath": "src/SqlApi.AsyncService.Common/ServiceClients/BroadcastServiceClient.cs",
+      "namespace": "SqlApi.AsyncService.Common.ServiceClients.BroadcastServiceClient",
+      "includeServiceClientRequestOptionsParameter": true,
+      "useCommonServiceClientException": true,
+      "arrayType": "System.Collections.Generic.List"
+    },
+    {
+      "serviceName": "BackendSqlApiService",
+      "swaggerUrl": "https://localhost:5254/swagger/sas/swagger.json",
+      "namespace": "SqlApi.AsyncService.Common.ServiceClients.BackendSqlApiService",
+      "filePath": "src/SqlApi.AsyncService.Common/ServiceClients/BackendSqlApiServiceClient.cs",
+      "includeServiceClientRequestOptionsParameter": true,
+      "useCommonServiceClientException": true
+    }
+  ],
+  "functionApps": [
+    {
+      "name": "nsa-async-functions",
+      "projetc": "SqlApi.AsyncService.Functions.csproj",
+      "httpPath": "/functions",
+      "devPort": 7071,
+      "stack": "netcore",
+      "dockerfileversion": "4-slim",
+      "durableTaskHubName": "nsaasyncfunctions"
+    }
+  ],
+  "SKYAPI": {
+    "RequiredEntitlementsAll": "todo"
+  },
+  "asyncTopics": [
+    {
+      "topic_name": "nsa-async-jobs",
+      "producing": {
+        "contract_name": "NsaAsyncJob",
+        "version": 4,
+        "file_path": "src/SqlApi.AsyncService.Common/AsyncContracts/NsaAsyncJob.cs",
+        "namespace": "SqlApi.AsyncService.Common.AsyncContracts"
+      }
+    }
+  ]
+}

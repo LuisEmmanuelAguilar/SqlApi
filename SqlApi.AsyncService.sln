@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35027.167
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SqlApi.AsyncService", "SqlApi.AsyncService\SqlApi.AsyncService.csproj", "{C21466B2-9560-4418-869C-73169A101277}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{66D77C8C-08B9-4926-B209-D53236F40043}"
+	ProjectSection(SolutionItems) = preProject
+		serviceconfig.json = serviceconfig.json
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SqlApi.AsyncService.Common", "SqlApi.AsyncService.Common\SqlApi.AsyncService.Common.csproj", "{1CB6B1DE-7FF6-43B4-B788-E2814661D838}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SqlApi.Async.Functions", "SqlApi.Async.Functions\SqlApi.Async.Functions.csproj", "{80BEEFFF-F670-4149-887D-281AFE6F1C60}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C21466B2-9560-4418-869C-73169A101277}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C21466B2-9560-4418-869C-73169A101277}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C21466B2-9560-4418-869C-73169A101277}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C21466B2-9560-4418-869C-73169A101277}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1CB6B1DE-7FF6-43B4-B788-E2814661D838}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CB6B1DE-7FF6-43B4-B788-E2814661D838}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CB6B1DE-7FF6-43B4-B788-E2814661D838}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CB6B1DE-7FF6-43B4-B788-E2814661D838}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80BEEFFF-F670-4149-887D-281AFE6F1C60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80BEEFFF-F670-4149-887D-281AFE6F1C60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80BEEFFF-F670-4149-887D-281AFE6F1C60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80BEEFFF-F670-4149-887D-281AFE6F1C60}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {252422D9-EF4C-4813-8A47-FB4893B664EC}
+	EndGlobalSection
+EndGlobal
